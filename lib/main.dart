@@ -1,4 +1,5 @@
 import 'package:child_care/views/screens/callender_attendence.dart';
+import 'package:child_care/views/screens/homepage.dart';
 import 'package:child_care/views/screens/students_attendence.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: studentAttendence(),
+      home: HomePage(),
     );
   }
 }

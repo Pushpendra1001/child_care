@@ -70,10 +70,15 @@ class studentAttendence extends StatelessWidget {
               child: ListView.builder(
                 itemBuilder: (context, index) {
                   return student_list_item(
-                      student_name: "Anmol Upadhya",
-                      father_name: "Ved Prakash",
-                      stu_class: "LKG GRADE 1",
-                      stu_img: "");
+                    box_color: Colors.blue.shade400,
+                    student_name: "Anmol Upadhya",
+                    father_name: "Ved Prakash",
+                    stu_class: "LKG GRADE 1",
+                    stu_img: "",
+                    gradient: false,
+                    attendence_circle: true,
+                    btn_text: "Mark the attendence",
+                  );
                 },
               ),
             )
