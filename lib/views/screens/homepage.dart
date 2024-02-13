@@ -54,11 +54,8 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       backgroundColor: Colors.grey.shade400,
+      drawer: const Drawer(),
       appBar: AppBar(
-        leading: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
-          child: InkWell(onTap: () {}, child: const Icon(Icons.menu)),
-        ),
         actions: [
           const InkWell(child: Icon(Icons.notifications)),
           Padding(
