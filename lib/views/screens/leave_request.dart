@@ -194,12 +194,11 @@ class _LeaveRequestPageState extends State<LeaveRequestPage> {
             const SizedBox(height: 16),
             Center(
               child: SizedBox(
-                width: screenwidth * 0.5, // 80% of screen width
-                height:
-                    screenwidth * 0.1, // 10% of screen width, adjust as needed
+                width: screenwidth * 0.5,
+                height: screenwidth * 0.1,
                 child: ElevatedButton(
                   onPressed: () {
-                    // Add your onPressed callback here
+                    // Add your onPressed  here
                   },
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all<Color>(

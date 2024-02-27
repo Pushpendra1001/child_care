@@ -28,25 +28,27 @@ class _MedicalLeaveListState extends State<MedicalLeaveList> {
     return ListView.builder(
       itemCount: _leaves.length,
       itemBuilder: (context, index) {
-        return Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(
-            decoration: BoxDecoration(
-              border: Border.all(color: Colors.grey.shade300),
-              borderRadius: BorderRadius.circular(5),
-            ),
-            child: ListTile(
-              title: Text(_leaves[index].name),
-              subtitle: Text(_leaves[index].date),
-              trailing: Chip(
-                label: Text(
-                  _leaves[index].status,
-                  style: TextStyle(
+        return Expanded(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.grey.shade300),
+                borderRadius: BorderRadius.circular(5),
+              ),
+              child: ListTile(
+                title: Text(_leaves[index].name),
+                subtitle: Text(_leaves[index].date),
+                trailing: Chip(
+                  label: Text(
+                    _leaves[index].status,
+                    style: TextStyle(
+                        color: _getBackgroundColor(_leaves[index].status)),
+                  ),
+                  // backgroundColor: _getBackgroundColor(_leaves[index].status),
+                  side: BorderSide(
                       color: _getBackgroundColor(_leaves[index].status)),
                 ),
-                // backgroundColor: _getBackgroundColor(_leaves[index].status),
-                side: BorderSide(
-                    color: _getBackgroundColor(_leaves[index].status)),
               ),
             ),
           ),
