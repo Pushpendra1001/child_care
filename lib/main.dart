@@ -1,9 +1,6 @@
-import 'package:child_care/views/screens/callender_attendence.dart';
-import 'package:child_care/views/screens/child_today_update_page.dart';
-import 'package:child_care/views/screens/homepage.dart';
-import 'package:child_care/views/screens/leave_request.dart';
-import 'package:child_care/views/screens/slot_booking.dart';
-import 'package:child_care/views/screens/students_attendence.dart';
+import 'package:child_care/views/screens/photogallery/image_gallery_screen.dart';
+import 'package:child_care/views/screens/loginScreens/intro1.dart';
+import 'package:child_care/views/screens/loginScreens/signIn_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,9 +12,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: slotBooking(),
+      home: IntroPage1(),
     );
   }
 }

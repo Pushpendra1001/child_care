@@ -1,4 +1,5 @@
 import 'package:child_care/views/screens/callender_attendence.dart';
+import 'package:child_care/views/screens/child_today_update_page.dart';
 import 'package:circle_progress_bar/circle_progress_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -102,7 +103,7 @@ class student_list_item extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const AttendencePage(),
+                                builder: (context) => const StudentUpdates(),
                               ));
                         },
                         child: Row(

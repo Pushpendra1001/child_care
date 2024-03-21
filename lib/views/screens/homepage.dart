@@ -1,5 +1,10 @@
 import 'package:child_care/views/common/parent_container.dart';
 import 'package:child_care/views/common/student_list_card.dart';
+import 'package:child_care/views/screens/callender_attendence.dart';
+import 'package:child_care/views/screens/leave_request.dart';
+import 'package:child_care/views/screens/photogallery/gallery_homepage.dart';
+import 'package:child_care/views/screens/photogallery/image_gallery_screen.dart';
+import 'package:child_care/views/screens/slot_booking.dart';
 import 'package:child_care/views/screens/students_attendence.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -30,8 +35,13 @@ class _HomePageState extends State<HomePage> {
     List<ContainerData> containers = [
       ContainerData('Annoucement', "assets/images/annouce.png", () {},
           const Color(0xffF7ECFE)),
-      ContainerData('Attendace', "assets/images/attend.png", () {},
-          const Color(0xffFFF7E9)),
+      ContainerData('Attendace', "assets/images/attend.png", () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => studentAttendence(),
+            ));
+      }, const Color(0xffFFF7E9)),
       ContainerData('Weekly routine', "assets/images/week.png", () {},
           const Color(0xffD1EEF3)),
       ContainerData('Food Menu', "assets/images/food.png", () {},
@@ -42,14 +52,24 @@ class _HomePageState extends State<HomePage> {
           const Color(0xffECF2F9)),
       ContainerData('Transportaion', "assets/images/transport.png", () {},
           const Color(0xffFFF7E9)),
-      ContainerData('Photo Gallery', "assets/images/gallery.png", () {},
-          const Color(0xffFFE4B3)),
+      ContainerData('Photo Gallery', "assets/images/gallery.png", () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => galleryHomePage(),
+            ));
+      }, const Color(0xffFFE4B3)),
       ContainerData('Fees Section', "assets/images/fees.png", () {},
           const Color(0xffFFF7E9)),
       ContainerData('Child Details', "assets/images/childdetails.png", () {},
           const Color(0xffFFE4B3)),
-      ContainerData('Slot Booking', "assets/images/slotbook.png", () {},
-          const Color(0xffECF2F9)),
+      ContainerData('Slot Booking', "assets/images/slotbook.png", () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => slotBooking(),
+            ));
+      }, const Color(0xffECF2F9)),
     ];
 
     return Scaffold(
@@ -234,7 +254,12 @@ class _HomePageState extends State<HomePage> {
                                       text: "Chat with tutor"),
                                   parent_container(
                                       ontapping: () {
-                                        print("function body...");
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  LeaveRequestPage(),
+                                            ));
                                       },
                                       image: "assets/images/leave.png",
                                       text: "Request Leave"),
