@@ -22,8 +22,16 @@ class studentAttendence extends StatelessWidget {
                   color: Color.fromRGBO(21, 45, 161, 0.68),
                   borderRadius: BorderRadius.all(Radius.circular(10))),
               height: MediaQuery.of(context).size.height / 6,
-              child: Row(
+              child: Stack(
                 children: [
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: Flexible(
+                      child: Image.asset(
+                        "assets/images/attendace.png",
+                      ),
+                    ),
+                  ),
                   const Padding(
                     padding: EdgeInsets.all(16.0),
                     child: Column(
@@ -45,14 +53,6 @@ class studentAttendence extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Align(
-                    alignment: Alignment.center,
-                    child: Flexible(
-                      child: Image.asset(
-                        "assets/images/attendace.png",
-                      ),
-                    ),
-                  )
                 ],
               ),
             ),

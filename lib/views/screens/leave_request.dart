@@ -19,10 +19,6 @@ class _LeaveRequestPageState extends State<LeaveRequestPage> {
     var screenwidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios),
-          onPressed: () {},
-        ),
         title: const Center(
             child: Text(
           "Leave Request",
